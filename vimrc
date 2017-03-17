@@ -1,13 +1,34 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize it
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'scrooloose/nerdtree'
+"Plugin 'powerline/powerline'
+
+" All plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on
+
 set number
-set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h20
-" settings for vim-ariline
-set laststatus=2
-"let g:airline_powerline_fonts = 1
-"if !exists('g:airline_symbols')
-	"let g:airline_symbols = {}
-"endif
-"let g:airline_symbols.space = "\ua0"
 
 " Overrides
-inoremap <leader>{ {}<Esc>ha<return><Esc>O<tab>
+inoremap <leader>{ {}<Esc>ha<return><Esc>O
+
+"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Powerline setup
+set laststatus=2
+set term=xterm-256color
+set termencoding=utf-8
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
+let g:Powerline_symbols='fancy'
+
+" set gui font
+set guifont=Monofur\ for\ Powerline.tff
+
