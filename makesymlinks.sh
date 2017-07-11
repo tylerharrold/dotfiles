@@ -8,7 +8,7 @@
 
 dir=~/dotfiles 		#dotfiles directory
 olddir=~/dotfiles_old 	#old dotfiles backup directory
-files="vimrc vim"
+files="vimrc vim bashrc short.pwd.py"
 
 #######
 
@@ -17,7 +17,7 @@ echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 echo "...done"
 
-# change to the dotfiled directory
+# change to the dotfile directory
 echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
@@ -25,7 +25,7 @@ echo "...done"
 # move any existing dotfiles in homedir to dotfiles_old, then create symlinks
 for file in $files; do
 	echo "Moving any existing dotfiles from ~ to $olddir"
-	mv ~/.$file ~/dotfiles_old/
+	mv ~/.$file $olddir
 	echo "Creating symlink to $file in home directory."
 	ln -s $dir/$file ~/.$file
 done
