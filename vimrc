@@ -1,6 +1,12 @@
+" prevent forced vi compatibility
 set nocompatible
+
+" setup reads for filetypes and using filetype plugins
 :filetype on
 :filetype plugin on
+
+" set syntax highlighting on
+syntax on
 
 " set the runtime path to include Vundle and initialize it
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -23,4 +29,3 @@ set number
 inoremap <leader>{ {}<Esc>ha<return><Esc>O
 
 set laststatus=2 " this allows us to see the light line, for whatever reason
-

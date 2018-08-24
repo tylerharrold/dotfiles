@@ -117,3 +117,4 @@ if ! shopt -oq posix; then
 fi
 
 #export PROMPT_COMMAND='PS1="$(python ~/.short.pwd.py)"' 
+export PATH="/home/tyler/anaconda3/bin:$PATH"
